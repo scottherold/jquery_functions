@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>My jQuery basic assignment</title>
+        <meta charset="UTF-8">
+        <meta name="My jQuery basic assignment" description="Fooling around with jQuery!">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#addclass").click(function() {
+                    $(".col p").first().addClass("red");
+                });
+                $("#slidetoggle").click(function() {
+                    $(".sl-tog-img").slideToggle("slow");
+                });
+                $("#append").click(function() {
+                    $(".append").append("<p>Here it is!</p>");
+                });
+                $("#hide").click(function() {
+                    $(".hide p").hide();
+                });
+                $("#show").click(function() {
+                    $(".show p").show("slow");
+                });
+                $("#toggle").click(function() {
+                    $(".toggle p").toggle();
+                });
+                $("#slidedown").click(function() {
+                    $(".sl-dwn-img").slideDown("fast");
+                })
+                $("#slideup").click(function() {
+                    $(".sl-up-img").slideUp("slow");
+                });
+                $("#fadein").click(function() {
+                    $(".fd-in-img").fadeIn("slow");
+                });
+                $("#fadeout").click(function() {
+                    $(".fd-out p").fadeOut("fast");
+                });
+                $("#before").click(function() {
+                    $(".before p").before("<p>See, up here!</p>");
+                });
+                $("#after").click(function() {
+                    $(".after p").after("<p>Now down below!</p>");
+                });
+                $("#html").click(function() {
+                    $(".html p").html("<p>I didn't like that paragraph anyway...</p>");
+                });
+                $("#attr").click(function() {
+                    $("img").attr({
+                        src: "images/codercat.jpg",
+                        alt: "coder cat"
+                    });
+                });
+                $("#val").click(function() {
+                    var text = $(this).text();
+                    $(".val input").val(text);
+                });
+            });
+        </script>    
+    </head>
+    <body>
+        <div id="container">
+            <a name="addclass"></a>
+            <div class="subsec">
+                <a href="#addclass" id="addclass">AddClass</a>
+                <div class='col'>
+                    <h1>AddClass</h1>
+                    <p>Click the button to add class 'red' to this paragraph</p>
+                </div>
+            </div>
+            <a name="slidetoggle"></a>
+            <div class="subsec">
+                <a href="#slidetoggle" id="slidetoggle">SlideToggle</a>
+                <div class='col'>
+                    <h1>SlideToggle</h1>
+                    <img class="sl-tog-img img-hid" src="images/chellocat.jpg" alt="portal cat">
+                    <p>Click the button to slidetoggle a hidden image</p>
+                </div>
+            </div>
+            <a name="append"></a>
+            <div class="subsec">
+                <a href="#append" id="append">Append</a>
+                <div class='col append'>
+                    <h1>Append</h1>
+                    <p>Click the button to append a new paragraph!</p>
+                </div>
+            </div>
+            <a name="hide"></a>
+            <div class="subsec">
+                <a href="#hide" id="hide">Hide</a>
+                <div class='col hide'>
+                    <h1>Hide</h1>
+                    <p>Click the button to hide this paragraph</p>
+                </div>
+            </div>
+            <a name="show"></a>
+            <div class="subsec">
+                <a href="#show" id="show">Show</a>
+                <div class='col show'>
+                    <h1>Show</h1>
+                    <p>You found the hidden paragraph!</p>
+                </div>
+            </div>
+            <a name="toggle"></a>
+            <div class="subsec">
+                <a href="#toggle" id="toggle">Toggle</a>
+                <div class='col toggle'>
+                    <h1>Toggle</h1>
+                    <p>Click the button to hide or show this paragraph</p>
+                </div>
+            </div>
+            <a name="slidedown"></a>
+            <div class="subsec">
+                <a href="#slidedown" id="slidedown">SlideDown</a>
+                <div class='col'>
+                    <h1>SlideDown</h1>
+                    <img class="sl-dwn-img img-hid" src="images/chellocat.jpg" alt="portal cat">
+                    <p>Click the button to slide the a hidden image out of nowhere!</p>
+                </div>
+            </div>
+            <a name="slideup"></a>
+            <div class="subsec">
+                <a href="#slideup" id="slideup">SlideUp</a>
+                <div class='col'>
+                    <h1>SlideUp</h1>
+                    <img class="sl-up-img" src="images/chellocat.jpg" alt="portal cat">
+                    <p>Click the button to slide the image up and away!</p>
+                </div>
+            </div>
+            <a name="fadein"></a>
+            <div class="subsec">
+                <a href="#fadein" id="fadein">FadeIn</a>
+                <div class='col'>
+                    <h1>FadeIn</h1>
+                    <img class="fd-in-img img-hid" src="images/chellocat.jpg" alt="portal cat">
+                    <p>Click the button to make pull an image from another dimension!</p>
+                </div>
+            </div>
+            <a name="fadeout"></a>
+            <div class="subsec">
+                <a href="#fadeout" id="fadeout">FadeOut</a>
+                <div class='col fd-out'>
+                    <h1>FadeOut</h1>
+                    <p>Click the button to return this paragraph to the ether...</p>
+                </div>
+            </div>
+            <a name="before"></a>
+            <div class="subsec">
+                <a href="#before" id="before">Before</a>
+                <div class='col before'>
+                    <h1>Before</h1>
+                    <p>Click the button to add a new paragraph before this one</p>
+                </div>
+            </div>
+            <a name="after"></a>
+            <div class="subsec">
+                <a href="#after" id="after">After</a>
+                <div class='col after'>
+                    <h1>After</h1>
+                    <p>Click the button to add a new paragraph after this one</p>
+                </div>
+            </div>
+            <a name="html"></a>
+            <div class="subsec">
+                <a href="#html" id="html">HTML</a>
+                <div class='col html'>
+                    <h1>HTML</h1>
+                    <p>Click the button to replace this paragraph with a new one!</p>
+                </div>
+            </div>
+            <a name="attr"></a>
+            <div class="subsec">
+                <a href="#attr" id="attr">Attr</a>
+                <div class='col'>
+                    <h1>Attr</h1>
+                    <p>Click the button to change all the images on the page!</p>
+                </div>
+            </div>
+            <a name="val"></a>
+            <div class="subsec">
+                <a href="#val" id="val">Val</a>
+                <div class='col val'>
+                    <h1>Val</h1>
+                    <p>Click the button to populate the input field</p>
+                    <input type="text" value="click the button!">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

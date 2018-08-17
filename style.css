@@ -1,0 +1,84 @@
+* { /* this is your compatability reset */
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    width: 1000px;
+    font-family: helvetica;
+}
+
+.subsec {
+    width: 980px;
+    display: block;
+    border-bottom-color: black;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    padding: 20px, 0px;
+    margin: 10px;
+}
+
+    .subsec a {
+            display: inline-block;
+            width: 100px;
+            text-decoration: none;
+            vertical-align: center;
+            text-align: center;
+            color: black;
+            border-color: black;
+            border-width: 1px;
+            border-style: solid;
+            box-shadow: black 2px 2px 1px;
+            padding: 2px 5px;
+            margin: 40px 20px 30px 0px;
+        }
+
+.col {
+    display: inline-block;
+    width: 800px;
+}
+    
+    .col h1 {
+        display: block;
+        font-size: xx-large;
+        text-align: center;
+        margin: 10px 0px;
+        }
+
+    .col p {
+        display: block;
+        margin: 10px 0px;
+    }
+
+.img-hid {
+    display: none;
+    width: 100px;
+    text-align: center;
+}
+
+.red {
+    color: red;
+}
+
+.show p {
+    display: none;
+}
+
+img {
+    width: 100px;
+}
+
+.val input {
+    width: 200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    padding: 2px;
+}
